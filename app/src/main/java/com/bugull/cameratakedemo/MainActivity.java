@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.take_btn:
-                //检查权限(6.0以上做权限判断)
+                //检查权限(6.0以上做权限判断) 检查当前版本是否大于6.0系统
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (mPermissionsChecker.lacksPermissions(PERMISSIONS)) {
                         startPermissionsActivity();
